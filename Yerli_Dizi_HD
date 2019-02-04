@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	int dizi[10];
+	int maks=0;
+	srand(time(NULL));
+	for(int x=0; x<10; x++){
+		dizi[x]=1+rand()%1000;
+	}
+	maks=dizi[0];
+	for(int a=0; a<=9; a++){
+		if(maks<dizi[a]) maks=dizi[a];
+	}
+	printf("dizinin elemanlari \n");
+	printf("0. elemani: %d \n", dizi[0]);
+	printf("1. elemani: %d \n", dizi[1]);
+	printf("2. elemani: %d \n", dizi[2]);
+	printf("3. elemani: %d \n", dizi[3]);
+	printf("4. elemani: %d \n", dizi[4]);
+	printf("5. elemani: %d \n", dizi[5]);
+	printf("6. elemani: %d \n", dizi[6]);
+	printf("7. elemani: %d \n", dizi[7]);
+	printf("8. elemani: %d \n", dizi[8]);
+	printf("9. elemani: %d \n", dizi[9]);
+	printf("dizinin en buyuk elemani: %d", maks);
+	return(0);
+}
