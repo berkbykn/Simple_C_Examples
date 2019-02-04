@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	int sayi, x;
+	srand(time(NULL));
+	sayi=1+rand()%100;
+	printf("1 ile 100 arasinda rastgele bir sayi uretilmistir. \n");
+	printf(" Simdi bu sayiyi tahmin etmeniz gerekmektedir \n");
+	printf("Tahmininizi giriniz: ");
+	scanf("%d", &x);
+	
+	while(x!=sayi){
+		if(x<sayi){ printf("Daha buyuk bir sayi girmelisiniz.");
+		scanf("%d", &x);
+		}
+		if(x>sayi){ printf("Daha kucuk bir sayi girmelisiniz.");
+		scanf("%d", &x);
+		}
+		if(x==sayi){ printf("Dogru bildiniz! \n");
+		printf("sayi=%d", sayi);
+		}
+	}
+	return(0);
+}
