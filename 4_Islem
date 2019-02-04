@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+	printf ("HESAP MAKINESI \n");
+	float a, b;
+	char secim;
+	float Topsonuc, Farksonuc, Carpsonuc, Bolsonuc;
+	printf ("Toplama + \n");
+	printf ("Cikarma - \n");
+	printf ("Carpma  * \n");
+	printf ("Bolme   / \n");
+	printf ("Gerceklestireceginiz islemi seciniz: ");
+	scanf ("%c", &secim);
+	printf ("1.sayiyi giriniz: \n");
+	scanf ("%f", &a);
+	printf ("2.sayiyi giriniz: \n");
+	scanf ("%f", &b);
+	if (secim == '+') {
+		Topsonuc = a+b;
+		printf ("Iki sayinin toplami= %f", Topsonuc);
+	}
+	else if (secim == '-') {
+		Farksonuc = a-b;
+		printf ("Iki sayinin farki= %f", Farksonuc);
+	}
+	else if (secim == '*') {
+		Carpsonuc = a*b;
+		printf ("Iki sayinin carpimi= %f", Carpsonuc);
+	}
+	else if (secim == '/') {
+		Bolsonuc = a/b;
+		printf ("Iki sayinin bolumu= %f", Bolsonuc);
+	}
+	else {
+		printf ("ISLEM BASARISIZ! LUTFEN +,-,*,/ GIRINIZ!");
+	}
+	return (0);
+}
